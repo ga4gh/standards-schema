@@ -1,0 +1,20 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "$id": "http://schemas.ga4gh.org:8000/schemas/standardversion",
+    "title": "StandardVersion",
+    "type": "object",
+    "description": "a description",
+    "properties": {
+        "version": {
+            "type": "string"
+        },
+        "spec_url": {
+            "type": "string"
+        }
+    },
+    "required": [
+        "standard",
+        "version",
+        "spec_url"
+    ]
+}

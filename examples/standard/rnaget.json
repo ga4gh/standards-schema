@@ -1,0 +1,16 @@
+{
+  "id": "rnaget",
+  "name": "RNAget",
+  "category": "API",
+  "short_description": "get gene expression count data",
+  "long_description": "The RNAget API describes a common set of endpoints for search and retrieval of processed RNA data. This currently include feature level expression data from RNA-Seq type assays and signal data over a range of bases from ChIP-seq, methylation or similar epigenetic experiments.",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "spec_url": "https://raw.githubusercontent.com/ga4gh-rnaseq/schema/master/rnaget-openapi.yaml"
+    }
+  ],
+  "primary_workstream": {
+    "name": "LSG"
+  }
+}

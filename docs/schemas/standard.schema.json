@@ -1,0 +1,49 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "$id": "http://schemas.ga4gh.org:8000/schemas/standard",
+    "title": "Standard",
+    "type": "object",
+    "description": "a description",
+    "properties": {
+        "name": {
+            "type": "string"
+        },
+        "category": {
+            "type": "string",
+            "enum": [
+                "API",
+                "FileFormat",
+                "Schema",
+                "Policy"
+            ]
+        },
+        "short_description": {
+            "type": "string"
+        },
+        "long_description": {
+            "type": "string"
+        },
+        "versions": {
+            "type": "array",
+            "items": {
+                "$ref": "http://schemas.ga4gh.org:8000/schemas/standardversion"
+            }
+        },
+        "primary_workstream": {
+            "$ref": "http://schemas.ga4gh.org:8000/schemas/workstream"
+        },
+        "additional_workstreams": {
+            "type": "array",
+            "items": {
+                "$ref": "http://schemas.ga4gh.org:8000/schemas/workstream"
+            }
+        }
+    },
+    "required": [
+        "name",
+        "short_description",
+        "long_description",
+        "versions",
+        "primary_workstream"
+    ]
+}

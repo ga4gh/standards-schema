@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <h2>GA4GH Standards</h2>
+
+    <div id="inputs">
+      <label for="input-workstream">Search by Workstream</label>
+      <input id="input-workstream" type="text"></input>
+    </div>
+
+    
+
+    <table id="standards-table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Category</th>
+          <th>Short Description</th>
+          <th>Workstream</th>
+          <th>View</th>
+        </tr>
+      </thead>
+      <tbody id="standards-tbody">
+
+      </tbody>
+    </table>
+    <script>
+
+      function searchAndPopulate() {
+        var workstreamVal = $("#input-workstream").val();
+        var params = {};
+        if (workstreamVal) {
+          params["workstream"] = workstreamVal;
+        }
+
+        $.ajax({
+          url: "http://localhost:5000/standards/search",
+          type: "get",
+          data: params,
+          success: function(standards) {
+            var tbodyInnerHtml = "";
+            standards.forEach(std => {
+              tbodyInnerHtml += `<tr>
+                <td>${std["name"]}</td>
+                <td>${std["category"]}</td>
+                <td>${std["short_description"]}</td>
+                <td>${std["primary_workstream"]["name"]}</td>
+                <td><a href="/standards/${std["id"]}">View</a></td>
+              </tr>`;
+            });
+            $("#standards-tbody").html(tbodyInnerHtml);
+          }
+        })
+      }
+
+      $("#input-workstream").on("input", function() {
+        searchAndPopulate();
+      })
+
+      searchAndPopulate();
+    </script>
+  </body>
+</html>

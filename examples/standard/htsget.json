@@ -1,0 +1,16 @@
+{
+  "id": "htsget",
+  "name": "htsget",
+  "category": "API",
+  "short_description": "get reads/variants",
+  "long_description": "This data retrieval API bridges from existing genomics bulk data transfers to a client/server model",
+  "versions": [
+    {
+      "version": "1.2.0",
+      "spec_url": "https://raw.githubusercontent.com/samtools/hts-specs/master/pub/htsget-openapi.yaml"
+    }
+  ],
+  "primary_workstream": {
+    "name": "LSG"
+  }
+}

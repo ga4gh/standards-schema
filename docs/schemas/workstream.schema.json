@@ -1,0 +1,26 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "$id": "http://schemas.ga4gh.org:8000/schemas/workstream",
+    "$ref": "#/definitions/WorkStream",
+    "title": "WorkStream",
+    "description": "a description",
+    "properties": {
+        "name": {
+            "type": "string",
+            "description": "a thing",
+            "enum": [
+                "ClinPheno",
+                "Cloud",
+                "Discovery",
+                "DURI",
+                "LSG",
+                "GKS"
+            ],
+            "version": "1.0.0",
+            "testProperty": "test"
+        }
+    },
+    "required": [
+        "name"
+    ]
+}

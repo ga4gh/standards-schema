@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <h2 id="title"></h2>
+
+    <h3>Short Description</h3>
+    <p id="short-description"></p>
+
+    <h3>Long Description</h3>
+    <p id="long-description"></p>
+
+    <h3>Version History</h3>
+    <div id="version-history">
+
+    </div>
+
+
+
+    <script>
+      $.ajax({
+        url: "http://localhost:5000/standards/<%=id%>",
+        success: function(standard) {
+          $("#title").html(standard["name"]);
+          $("#short-description").html(standard["short_description"]);
+          $("#long-description").html(standard["long_description"]);
+
+          var versionHistoryHtml = "";
+          standard["versions"].forEach(version => {
+            var versionHtml = `<div>
+              <p>
+                Version: ${version["version"]}
+                <a href="${version["spec_url"]}">View Specification</a>
+              </p>
+            </div>`;
+
+            versionHistoryHtml += versionHtml;
+          });
+          $("#version-history").html(versionHistoryHtml);
+        }
+      })
+    </script>
+
+  </body>
+</html>

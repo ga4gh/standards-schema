@@ -1,0 +1,16 @@
+{
+  "id": "refget",
+  "name": "refget",
+  "category": "API",
+  "short_description": "Refget enables access to reference sequences using an identifier derived from the sequence itself",
+  "long_description": "Reference sequences are fundamental to genomic analysis and interpretation however naming is a serious issue. For example the reference genomic sequence GRCh38/1 is also known as hg38/chr1, CM000663.2 and NC_000001.11. In addition there is no standardised way to access reference sequence from providers such as INSDC (ENA, Genbank, DDBJ), Ensembl or UCSC.",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "spec_url": "https://raw.githubusercontent.com/samtools/hts-specs/master/pub/refget-openapi.yaml"
+    }
+  ],
+  "primary_workstream": {
+    "name": "LSG"
+  }
+}

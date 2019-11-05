@@ -1,0 +1,16 @@
+{
+  "id": "drs",
+  "name": "DRS",
+  "category": "API",
+  "short_description": "A generic interface to data repositories",
+  "long_description": "The Data Repository Service (DRS) API provides a generic interface to data repositories so data consumers, including workflow systems, can access data in a single, standardized way regardless of where it’s stored or how it’s managed. The primary functionality of DRS is to map a logical ID to a means for physically retrieving the data represented by the ID.",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "spec_url": "https://raw.githubusercontent.com/ga4gh/data-repository-service-schemas/master/openapi/data_repository_service.swagger.yaml"
+    }
+  ],
+  "primary_workstream": {
+    "name": "Cloud"
+  }
+}

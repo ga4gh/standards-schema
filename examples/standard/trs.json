@@ -1,0 +1,16 @@
+{
+  "id": "trs",
+  "name": "TRS",
+  "category": "API",
+  "short_description": "A standardized way to describe the availability of tools and workflows.",
+  "long_description": "The GA4GH Tool Registry API is a standard for listing and describing available tools (both stand-alone, Docker-based tools as well as workflows in CWL, WDL or Nextflow) in a given registry. This defines a minimal, common API describing tools that we propose for support by multiple tool/workflow registries like Dockstore, BioContainers, and Agora for the purposes of exchange, indexing, and searching.",
+  "versions": [
+    {
+      "version": "2.0.0",
+      "spec_url": "https://raw.githubusercontent.com/ga4gh/tool-registry-service-schemas/develop/openapi/openapi.yaml"
+    }
+  ],
+  "primary_workstream": {
+    "name": "Cloud"
+  }
+}
